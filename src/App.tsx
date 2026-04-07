@@ -28,8 +28,9 @@ import hero5 from './assets/hero/hero-5.jpg';
 // Event images
 import imgAfrotaku from './assets/events/Otaku RDV - AfrOtaku.jpg';
 import imgSubarachill from './assets/events/Subarachill 2025.jpg';
+import imgOtakuMangaContext from './assets/events/Otaku RDV - Manga Contexte.jpg';
+import imgHallowen from './assets/events/Hallowen.png';
 import { 
-  Sparkles, 
   ChevronRight, 
   Menu, 
   X, 
@@ -53,6 +54,7 @@ interface EventItem {
   title: string;
   category: string;
   description: string;
+  fullDescription: string;
   highlights: string[];
   image: string;
 }
@@ -64,70 +66,70 @@ const COSPLAYS: CosplayItem[] = [
     id: 1,
     name: "Yumeko Jabami",
     source: "Kakegurui",
-    description: "Protagoniste de l’Académie privée Hyakkaou, Yumeko est fascinée par l’excitation du jeu et la psychologie des autres joueurs. Mon cosplay reflète son audace et son intelligence.",
+    description: "Protagoniste de l'Académie privée Hyakkaou, Yumeko est fascinée par l'excitation du jeu et la psychologie des autres joueurs. Mon cosplay reflète son audace et son intelligence, tout en y apportant ma touche personnelle.",
     image: imgYumeko
   },
   {
     id: 2,
     name: "Misa Amane",
     source: "Death Note",
-    description: "Idole, mannequin et chanteuse, Misa devient le « Second Kira ». Mon interprétation met en avant son côté charismatique et sa personnalité lumineuse.",
+    description: "Idole, mannequin et chanteuse, Misa devient le « Second Kira ». Mon interprétation met en avant son côté charismatique et sa personnalité lumineuse, avec une attention particulière aux détails gothiques de son style.",
     image: imgMisa
   },
   {
     id: 3,
     name: "Calliope",
     source: "Hercule (Disney)",
-    description: "Muse de la poésie épique, chef du groupe des cinq Muses. Mon cosplay illustre sa prestance et son énergie.",
+    description: "Muse de la poésie épique, chef du groupe des cinq Muses. Mon cosplay illustre sa prestance et son énergie, tout en ajoutant ma touche créative sur les accessoires et la mise en scène.",
     image: imgCalliope
   },
   {
     id: 4,
     name: "Kanaria",
     source: "Hunter X Hunter",
-    description: "Apprentie majordome de la famille Zoldyck et gardienne loyale, mon cosplay reflète la discipline et la loyauté du personnage.",
+    description: "Apprentie majordome de la famille Zoldyck et gardienne loyale, mon cosplay reflète la discipline et la loyauté du personnage tout en gardant ma propre expressivité.",
     image: imgKanaria
   },
   {
     id: 5,
     name: "Mima Kirigoe",
     source: "Perfect Blue",
-    description: "Personnage principal de l’anime psychologique Perfect Blue. Mon cosplay capture la dualité entre innocence et tension dramatique.",
+    description: "Personnage principal de l'anime psychologique Perfect Blue. Mon cosplay capture la dualité entre innocence et tension dramatique du personnage.",
     image: imgMima
   },
   {
     id: 6,
     name: "Toph Beifong",
-    source: "Avatar: The Last Airbender",
-    description: "Maîtresse de la terre aveugle, mon cosplay illustre sa force et son indépendance.",
+    source: "Avatar : Le Dernier Maître de l'Air",
+    description: "Maîtresse de la terre aveugle, mon cosplay illustre sa force et son indépendance, avec des accessoires et postures fidèles à son univers.",
     image: imgToph
   },
   {
     id: 7,
     name: "Choso",
     source: "Jujutsu Kaisen",
-    description: "Fœtus des Neuf Phases et allié stratégique, ce cosplay met en avant sa puissance et sa complexité.",
+    description: "Fœtus des Neuf Phases et allié stratégique, ce cosplay met en avant sa puissance et sa complexité, tout en incorporant ma propre identité.",
     image: imgChoso
   },
   {
     id: 8,
     name: "Nami",
     source: "One Piece",
-    description: "Navigatrice experte en météorologie, mon cosplay combine l’aspect pratique de son personnage et ma touche créative personnelle.",
+    description: "Navigatrice experte en météorologie, mon cosplay combine l'aspect pratique de son personnage et ma touche créative personnelle pour rendre la tenue unique.",
     image: imgNami
   },
   {
     id: 9,
     name: "Kimberly",
     source: "Street Fighter 6",
-    description: "Nouvelle combattante afro-américaine prodige, élève du ninja Guy. Mon cosplay combine sa personnalité pleine d'énergie et notre passion pour l'art.",
+    description: "Nouvelle combattante afro-américaine prodige, élève du ninja Guy, qui combine des attaques rapides et une grande mobilité pour déconcerter ses adversaires, utilisant des bombes de peinture et l'art de la tromperie pour ouvrir leur garde. Mon cosplay combine sa personnalité pleine d'énergie et notre passion pour l'art.",
     image: imgKimberly
   },
   {
     id: 10,
     name: "Yoriichi Tsugikuni",
     source: "Kimetsu no Yaiba",
-    description: "Pourfendeur de démons légendaire, mon cosplay illustre son talent exceptionnel et sa maîtrise du sabre.",
+    description: "Pourfendeur de démons légendaire, mon cosplay illustre son talent exceptionnel et sa maîtrise du sabre, tout en ajoutant des éléments créatifs pour refléter ma personnalité.",
     image: imgYoriichi
   }
 ];
@@ -138,14 +140,16 @@ const EVENTS: EventItem[] = [
     title: "Otaku RDV - Manga Contexte",
     category: "Culture & Art",
     description: "Organisé sur le campus, avec un défilé de cosplays exclusif et des chorégraphies dont j’ai été la directrice artistique.",
+    fullDescription: "Organisé sur le campus, avec un défilé de cosplays exclusif et des chorégraphies dont j’ai été la directrice artistique. Des personnages tels que Luffy, Yor Forger, Robin, Mami Tsunade et Toph Beifong ont été mis en avant. L’événement a rassemblé une centaine de passionnés, qui ont apprécié le défilé et les moments conviviaux.",
     highlights: ["100+ Passionnés", "Cosplay Parade", "Artistic Direction"],
-    image: "https://picsum.photos/seed/manga/1200/800"
+    image: imgOtakuMangaContext
   },
   {
     id: 2,
     title: "Otaku RDV - AfrOtaku",
     category: "Fusion Culturelle",
     description: "Une fusion entre cultures japonaise et africaine à travers un défilé thématique mettant en valeur des pagnes et accessoires africains.",
+    fullDescription: "Cette édition visait à combiner les cultures japonaise et africaine à travers un défilé thématique, mettant en valeur des pagnes et accessoires africains sur des modèles japonais. Les tenues, chorégraphies et décorations ont été soigneusement choisis pour illustrer cette fusion culturelle. Plus de 100 passionnés ont participé à l’événement.",
     highlights: ["Cultural Fusion", "African Fabrics", "Unique Choreography"],
     image: imgAfrotaku
   },
@@ -154,8 +158,18 @@ const EVENTS: EventItem[] = [
     title: "Subarachill 2025",
     category: "Grand Événement",
     description: "L’un des plus grands rassemblements d’otakus au Bénin, où j’ai dirigé le défilé thématique combinant comédie musicale et narration.",
+    fullDescription: "J’ai participé à Subarachill 2025, l’un des plus grands rassemblements d’otakus au Bénin, en dirigeant le défilé thématique, qui combinait comédie musicale et narration. Un moment fort de la scène otaku béninoise.",
     highlights: ["Musical Comedy", "Storytelling", "Major Gathering"],
     image: imgSubarachill
+  },
+  {
+    id: 4,
+    title: "Soirées Halloween",
+    category: "Événement Personnel",
+    description: "Organisation d’Halloween en comité restreint avec déguisements et ambiance immersive, ainsi que des soirées jeux de société.",
+    fullDescription: "À titre personnel, j’ai organisé Halloween 2024 en comité restreint avec des déguisements et une ambiance immersive, ainsi que de petites soirées jeux de société pour des communautés plus intimes. Ces moments permettent de renforcer les liens entre passionnés dans un cadre chaleureux et convivial.",
+    highlights: ["Halloween", "Jeux de Société", "Comité Restreint"],
+    image: imgHallowen
   }
 ];
 
@@ -397,6 +411,9 @@ const HeroSection = () => {
 };
 
 export default function App() {
+  const [selectedEvent, setSelectedEvent] = useState<EventItem | null>(null);
+  const [selectedCosplay, setSelectedCosplay] = useState<CosplayItem | null>(null);
+
   return (
     <div className="min-h-screen bg-white font-sans text-gray-900 selection:bg-orange-100 selection:text-orange-900">
       <Navbar />
@@ -485,7 +502,7 @@ export default function App() {
             subtitle="De Otaku RDV à BOW, découvrez les moments que j'ai eu le plaisir de coordonner et d'animer."
           />
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 gap-6 md:gap-8">
             {EVENTS.map((event, index) => (
               <motion.div 
                 key={event.id}
@@ -509,17 +526,24 @@ export default function App() {
                   </div>
                 </div>
                 <div className="p-5 sm:p-8">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 group-hover:text-orange-600 transition-colors">{event.title}</h3>
-                  <p className="text-gray-600 mb-6 line-clamp-3 leading-relaxed">
+                  <h3 className="text-lg sm:text-xl font-bold mb-2 sm:mb-3 group-hover:text-orange-600 transition-colors">{event.title}</h3>
+                  <p className="text-gray-600 mb-4 line-clamp-3 leading-relaxed text-sm">
                     {event.description}
                   </p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-5">
                     {event.highlights.map(tag => (
                       <span key={tag} className="px-3 py-1 bg-gray-50 rounded-lg text-[10px] font-bold uppercase tracking-wider text-gray-500">
                         {tag}
                       </span>
                     ))}
                   </div>
+                  <button
+                    onClick={() => setSelectedEvent(event)}
+                    className="inline-flex items-center gap-1.5 text-sm font-bold text-orange-600 hover:text-orange-700 transition-colors cursor-pointer"
+                  >
+                    En savoir plus
+                    <ChevronRight className="w-4 h-4" />
+                  </button>
                 </div>
               </motion.div>
             ))}
@@ -654,21 +678,26 @@ export default function App() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.05 }}
-                className="group relative aspect-[3/4] rounded-xl sm:rounded-2xl overflow-hidden bg-gray-100 cursor-pointer"
+                className="group flex flex-col"
               >
-                <img 
-                  src={cosplay.image} 
-                  alt={cosplay.name} 
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  referrerPolicy="no-referrer"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-3 sm:p-6">
-                  <p className="text-orange-500 text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-0.5 sm:mb-1">{cosplay.source}</p>
-                  <h4 className="text-white text-sm sm:text-xl font-bold mb-1 sm:mb-2">{cosplay.name}</h4>
-                  <p className="text-gray-300 text-[10px] sm:text-xs line-clamp-2 sm:line-clamp-3 leading-relaxed hidden sm:block">
-                    {cosplay.description}
-                  </p>
+                <div className="relative aspect-[3/4] rounded-t-xl sm:rounded-t-2xl overflow-hidden bg-gray-100">
+                  <img 
+                    src={cosplay.image} 
+                    alt={cosplay.name} 
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-3 sm:p-5">
+                    <h4 className="text-white text-sm sm:text-lg font-bold">{cosplay.name}</h4>
+                  </div>
                 </div>
+                <button
+                  onClick={() => setSelectedCosplay(cosplay)}
+                  className="inline-flex items-center justify-center gap-1.5 px-4 py-2 sm:py-2.5 bg-orange-600 text-white text-xs sm:text-sm font-bold rounded-b-xl sm:rounded-b-2xl hover:bg-orange-700 transition-colors cursor-pointer"
+                >
+                  Découvrir
+                  <ChevronRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                </button>
               </motion.div>
             ))}
           </div>
@@ -738,6 +767,113 @@ export default function App() {
           </div>
         </div>
       </footer>
+
+      {/* Event Modal */}
+      <AnimatePresence>
+        {selectedEvent && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6"
+            onClick={() => setSelectedEvent(null)}
+          >
+            <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 30 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+              className="relative bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl max-w-2xl w-full max-h-[90vh] flex flex-col"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Modal Image */}
+              <div className="relative aspect-video shrink-0">
+                <img
+                  src={selectedEvent.image}
+                  alt={selectedEvent.title}
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                <div className="absolute bottom-4 left-5 sm:left-6">
+                  <span className="px-3 py-1 bg-orange-600 rounded-full text-xs font-bold text-white">
+                    {selectedEvent.category}
+                  </span>
+                </div>
+                <button
+                  onClick={() => setSelectedEvent(null)}
+                  className="absolute top-3 right-3 sm:top-4 sm:right-4 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/40 backdrop-blur-sm text-white flex items-center justify-center hover:bg-black/60 transition-colors cursor-pointer"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+              </div>
+
+              {/* Modal Content */}
+              <div className="p-5 sm:p-8 overflow-y-auto">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">{selectedEvent.title}</h3>
+                <p className="text-gray-600 leading-relaxed mb-6">{selectedEvent.fullDescription}</p>
+                <div className="flex flex-wrap gap-2">
+                  {selectedEvent.highlights.map(tag => (
+                    <span key={tag} className="px-3 py-1.5 bg-orange-50 text-orange-700 rounded-lg text-xs font-bold uppercase tracking-wider">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Cosplay Modal */}
+      <AnimatePresence>
+        {selectedCosplay && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6"
+            onClick={() => setSelectedCosplay(null)}
+          >
+            <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 30 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.95, y: 20 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+              className="relative bg-white rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl max-w-lg w-full max-h-[90vh] flex flex-col"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Modal Image */}
+              <div className="relative min-h-[200px] max-h-[50vh] shrink overflow-hidden">
+                <img
+                  src={selectedCosplay.image}
+                  alt={selectedCosplay.name}
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
+                <button
+                  onClick={() => setSelectedCosplay(null)}
+                  className="absolute top-3 right-3 sm:top-4 sm:right-4 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-black/40 backdrop-blur-sm text-white flex items-center justify-center hover:bg-black/60 transition-colors cursor-pointer"
+                >
+                  <X className="w-5 h-5" />
+                </button>
+                <div className="absolute bottom-5 left-5 sm:bottom-6 sm:left-6 right-5 sm:right-6">
+                  <p className="text-orange-400 text-xs font-bold uppercase tracking-widest mb-1">{selectedCosplay.source}</p>
+                  <h3 className="text-2xl sm:text-3xl font-black text-white">{selectedCosplay.name}</h3>
+                </div>
+              </div>
+
+              {/* Modal Content */}
+              <div className="p-5 sm:p-8 overflow-y-auto">
+                <p className="text-gray-600 leading-relaxed">{selectedCosplay.description}</p>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
